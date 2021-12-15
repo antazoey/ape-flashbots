@@ -15,7 +15,7 @@ $ ape plugins list
 # ...copy and paste result of above command here...
 ```
 
-* Python Version: x.x.x
+* Python Version: 3.9.5
 * OS: osx/linux/win
 
 ### What went wrong?
