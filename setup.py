@@ -45,7 +45,7 @@ setup(
     name="ape-flashbots",
     use_scm_version=True,
     setup_requires=["setuptools_scm"],
-    description="""ape-flashbots: <SHORT_DESCRIPTION>""",
+    description="""ape-flashbots: ApeWorx implementation of web3-flashbots. Allows for bundled transactions""",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="ApeWorX Ltd.",
@@ -57,7 +57,7 @@ setup(
     ],  # NOTE: Add 3rd party libraries here
     python_requires=">=3.7,<4",
     extras_require=extras_require,
-    py_modules=["<ape-flashbots>"],
+    py_modules=["ape-flashbots"],
     license="Apache-2.0",
     zip_safe=False,
     keywords="ethereum",

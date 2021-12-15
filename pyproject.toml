@@ -25,7 +25,7 @@ addopts = """
     --cov-report term
     --cov-report html
     --cov-report xml
-    --cov=<MODULE_NAME>
+    --cov=ape-flashbots
 """
 python_files = "test_*.py"
 testpaths = "tests"
@@ -36,6 +36,6 @@ line_length = 100
 force_grid_wrap = 0
 include_trailing_comma = true
 known_third_party = ["hypothesis"]
-known_first_party = ["MODULE_NAME"]
+known_first_party = ["ape-flashbots"]
 multi_line_output = 3
 use_parentheses = true
