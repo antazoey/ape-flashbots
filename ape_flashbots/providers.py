@@ -49,7 +49,9 @@ class FlashbotsProvider(Web3Provider, ProviderAPI):
             "params": [["0x" + txn.encode().hex() for txn in bundle], "0xB84969"],
         }
         # TODO: The format of `json.dumps(body)` is wrong, leading to auth bug w/ flashbots server
-        message = messages.encode_defunct(text=Web3.keccak(text=json.dumps(body)).hex())
+        message = messages.encode_defunct(
+            text=Web3.keccak(text=json.dumps(body, separators=(",", ":"), sort_keys=True)).hex()
+        )
         sig = sealer.sign_message(message)
         if not sig:
             raise Exception("user did not sign")
