@@ -58,7 +58,7 @@ setup(
     ],  # NOTE: Add 3rd party libraries here
     python_requires=">=3.7,<4",
     extras_require=extras_require,
-    py_modules=["ape-flashbots"],
+    py_modules=["ape_flashbots"],
     license="Apache-2.0",
     zip_safe=False,
     keywords="ethereum",
