@@ -1,7 +1,7 @@
 # Add module top-level imports here
 from ape import plugins
 
-from .flashbots_provider import FlashbotsConfig, FlashbotsProvider
+from .providers import FlashbotsConfig, FlashbotsProvider
 
 
 @plugins.register(plugins.Config)
