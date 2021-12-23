@@ -34,15 +34,15 @@ $ git remote -V
 ```
 #### set your origin for your Pull Request
 ```
-$ git remote set-url origin git@github.com:johnson2427/ape.git
+$ git remote set-url origin git@github.com:<your_account>/<repo>.git
 ```
-#### set your upstream version [main branch]
+#### set your upstream version [main branch example]
 ```
 $ git remote add upstream git@github.com:ApeWorx/ape.git
 ```
 #### add an available remote from PR
 ```
-$ git remote add <branch> git@github.com:<branch>/ape.git
+$ git remote add <branch> git@github.com:<branch>/<repo>.git
 ```
 
 ## Quick Usage
@@ -71,7 +71,7 @@ $ export WEB3_INFURA_API_KEY
 #### Generate account
 
 ```
-$ ape accounts generate johnson_test
+$ ape accounts generate <account-name>
 ```
 
 #### Install ape -> branch from bryant
@@ -86,23 +86,23 @@ $ ape console --network :goerli:flashbots
 ```
 #### setup your account
 ```
-In [1]: a = accounts.load("johnson_test")
+In [1]: a = accounts.load("<account-name>")
 ```
 #### send the bundle
 ```
 In [2]: networks.active_provider.send_bundle([], a)
-SignableMessage(version=b'E', header=b'thereum Signed Message:\n66', body=b'0x7060d9ac9abe450a7fd5ad2f62c34e81f6af446aa88f1e0c9e9392b3a53dc089')
+SignableMessage(version=b'E', header=b'thereum Signed Message:\n66', body=b'<key>')
 
 Sign:  [y/N]: y
-Enter Passphrase to unlock 'johnson_test' []: 
-Leave 'johnson_test' unlocked? [y/N]: y
+Enter Passphrase to unlock '<your-account>' []: 
+Leave '<your-account>' unlocked? [y/N]: y
 --Return--
-> /home/blake/ApeWorx/ape-flashbots/ape_flashbots/providers.py(64)send_bundle()->None
+> /directory/to/ape-flashbots/ape_flashbots/providers.py(64)send_bundle()->None
 -> breakpoint()
 ```
 ```
 (Pdb) result.text
-'{"error":{"message":"signer address does not equal expected, got 0x8bC1de9A15e511b42dDcD8A6309cbCd2E42EAAdd, expected 0x5ab1f67Da42F71E52b88d9d32570b58a28042611"}}'
+'{"error":{"message":"signer address does not equal expected, got 0x8bC1de9A15e511b42dDcD8A6309cbCd2E42EAAdd, expected <your-secret-key>"}}'
 (Pdb) exit
 ```
 ## currently have an issue with key conversion in send_bundle
