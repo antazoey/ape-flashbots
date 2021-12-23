@@ -21,7 +21,7 @@ extras_require = {
         "twine",  # Package upload tool
     ],
     "dev": [
-        "commitizen",  # Manage commits and publishing releases
+        "commitizen>=2.19,<2.20",  # Manage commits and publishing releases
         "pre-commit",  # Ensure that linters are run prior to commiting
         "pytest-watch",  # `ptw` test watcher/runner
         "IPython",  # Console for interacting
@@ -42,10 +42,10 @@ with open("./README.md") as readme:
 
 
 setup(
-    name="ape-flashbots",
+    name="ape_flashbots",
     use_scm_version=True,
     setup_requires=["setuptools_scm"],
-    description="""ape-flashbots: ApeWorx implementation of web3-flashbots. Allows for bundled transactions""",
+    description="""ape_flashbots: ApeWorx implementation of web3-flashbots. Allows for bundled transactions""",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="ApeWorX Ltd.",
@@ -63,7 +63,7 @@ setup(
     zip_safe=False,
     keywords="ethereum",
     packages=find_packages(exclude=["tests", "tests.*"]),
-    package_data={"ape-flashbots": ["py.typed"]},
+    package_data={"ape_flashbots": ["py.typed"]},
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",

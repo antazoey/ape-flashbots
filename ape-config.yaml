@@ -1,0 +1,5 @@
+plugins:
+  - name: infura
+
+flashbots:
+  upstream: infura

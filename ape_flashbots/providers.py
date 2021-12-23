@@ -33,7 +33,7 @@ class FlashbotsProvider(Web3Provider, ProviderAPI):
             upstream_provider = self.network.ecosystem.goerli.default_provider
 
         if not isinstance(upstream_provider, UpstreamProvider):
-            raise Exception("Not upstreamable!")
+            raise Exception(f"Not upstreamable! {upstream_provider_name} is not connected")
 
         self._web3 = Web3(HTTPProvider(upstream_provider.connection_str))
         if not self._web3.isConnected():
@@ -50,7 +50,7 @@ class FlashbotsProvider(Web3Provider, ProviderAPI):
         }
         # TODO: The format of `json.dumps(body)` is wrong, leading to auth bug w/ flashbots server
         message = messages.encode_defunct(
-            text=Web3.keccak(text=json.dumps(body, separators=(",", ":"), sort_keys=True)).hex()
+            text=Web3.keccak(text=json.dumps(body, separators=(",", ":"))).hex()
         )
         sig = sealer.sign_message(message)
         if not sig:
@@ -59,5 +59,6 @@ class FlashbotsProvider(Web3Provider, ProviderAPI):
         result = requests.post(  # noqa: F841
             "https://relay-goerli.flashbots.net",
             json=body,
-            headers={"X-Flashbots-Signature": f"{sealer.address}:0x{sig.encode_vrs().hex()}"},
+            headers={"X-Flashbots-Signature": f"{sealer.address}:0x{sig.encode_rsv().hex()}"},
         )
+        breakpoint()
