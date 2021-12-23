@@ -26,6 +26,25 @@ cd ape_flashbots
 python3 setup.py install
 ```
 
+## Environment Setup
+
+#### check available remotes
+```
+$ git remote -V
+```
+#### set your origin for your Pull Request
+```
+$ git remote set-url origin git@github.com:johnson2427/ape.git
+```
+#### set your upstream version [main branch]
+```
+$ git remote add upstream git@github.com:ApeWorx/ape.git
+```
+#### add an available remote from PR
+```
+$ git remote add <branch> git@github.com:<branch>/ape.git
+```
+
 ## Quick Usage
 
 #### Setup dev environment
