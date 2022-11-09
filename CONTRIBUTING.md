@@ -4,7 +4,7 @@ To get started with working on the codebase, use the following steps prepare you
 
 ```bash
 # clone the github repo and navigate into the folder
-git clone https://github.com/unparalleled-js/ape-flashbots
+git clone https://github.com/unparalleled-js/ape-flashbots.git
 cd ape_flashbots
 
 # create and load a virtual environment
