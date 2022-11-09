@@ -50,7 +50,7 @@ setup(
     long_description_content_type="text/markdown",
     author="ApeWorX Ltd.",
     author_email="admin@apeworx.io",
-    url="https://github.com/ApeWorX/ape-flashbots",
+    url="https://github.com/unparalleled-js/ape-flashbots",
     include_package_data=True,
     install_requires=[
         "importlib-metadata ; python_version<'3.8'",

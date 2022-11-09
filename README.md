@@ -21,7 +21,7 @@ pip install ape_flashbots
 You can clone the repository and use [`setuptools`](https://github.com/pypa/setuptools) for the most up-to-date version:
 
 ```bash
-git clone https://github.com/ApeWorX/ape-flashbots.git
+git clone https://github.com/unparalleled-js/ape-flashbots
 cd ape_flashbots
 python3 setup.py install
 ```
